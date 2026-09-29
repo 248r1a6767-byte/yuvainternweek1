@@ -1,0 +1,7 @@
+Variable_Pair,Pearson_r,Pearson_p_value,Pearson_95_CI,Spearman_rho,Spearman_p_value,Statistical_Inference,Association_Nature
+Discount vs Profit,-0.2195,< 0.0001,"[-0.2381, -0.2007]",-0.5434,< 0.0001,Statistically Significant Association (p < 0.05),Strong monotonic negative association; non-linear profit decay
+Sales vs Profit,0.4791,< 0.0001,"[0.4638, 0.494]",0.5184,< 0.0001,Statistically Significant Association (p < 0.05),Moderate positive linear association; variance widens with volume
+Quantity vs Sales,0.2008,< 0.0001,"[0.1819, 0.2195]",0.3274,< 0.0001,Statistically Significant Association (p < 0.05),Weak positive linear association with transaction revenue
+Quantity vs Profit,0.0663,< 0.0001,"[0.0467, 0.0857]",0.2345,< 0.0001,Statistically Significant Association (p < 0.05),Near-zero linear association; negligible predictive relationship
+Shipping_Days vs Profit,-0.0047,0.6397,"[-0.0243, 0.0149]",-0.0072,0.4694,Statistically Insignificant (Fail to reject H0),Near-zero linear association; negligible predictive relationship
+Discount vs Sales,-0.0282,0.004827,"[-0.0478, -0.0086]",-0.057,< 0.0001,Statistically Significant Association (p < 0.05),Near-zero linear association; negligible predictive relationship

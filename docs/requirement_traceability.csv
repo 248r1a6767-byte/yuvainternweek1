@@ -1,0 +1,20 @@
+Requirement,Implementation,R_Script,Output_Asset,Report_Section,Status
+1. Publicly Available Dataset,Kaggle / Tableau Sample Superstore Dataset (9994 rows),R/01_initial_inspection.R,data/raw/superstore_raw.csv,Section 3: Dataset Overview,Completed
+2. Numerical & Categorical Variables,Full auditing across 5 numerical & 14 categorical variables,R/01_initial_inspection.R,data_dictionary_summary.csv,Section 4: Data Dictionary,Completed
+3. Data Cleaning & Preprocessing,Whitespace trimming zero-padding date parsing factor standardizing,R/04_duplicates_and_consistency.R,superstore_cleaned.csv,Section 10: Structural Cleaning,Completed
+4. Missing-Value Analysis & Handling,Completeness scan theoretical mechanism evaluation (MCAR/MAR/MNAR),R/03_missing_values.R,missing_value_summary.csv,Section 8: Missing-Value Handling,Completed
+5. Outlier Detection,Tukey's 1.5xIQR fencing bounds outlier counts & % calculation,R/05_outlier_analysis.R,outlier_summary.csv,Section 11: Outlier Detection,Completed
+6. Normalization & Standardization,Min-Max rescaling [0 1] and Z-score standardization N(0 1),R/06_transformation_and_normalization.R,normalization_standardization_summary.csv,Section 12: Normalization,Completed
+7. Categorical Encoding Using R,Factor conversion & model.matrix() one-hot dummy matrix,R/07_categorical_encoding.R,categorical_encoding_manifest.csv,Section 13: Categorical Encoding,Completed
+8. Exploratory Analysis (EDA),Distributions regional patterns category share discount bands,R/10_exploratory_analysis.R,category_grouped_summary.csv,Section 15: Exploratory Analysis,Completed
+9. Use of summary(),Real console capture of parametric & non-parametric summaries,R/01_initial_inspection.R,summary_raw_output.txt,Section 6: Initial Inspection,Completed
+10. Use of str(),Real console capture of variable structure and data types,R/01_initial_inspection.R,str_raw_output.txt,Section 6: Initial Inspection,Completed
+11. Descriptive Statistics,Calculated N mean median SD var min Q1 Q3 max IQR,R/09_descriptive_statistics.R,descriptive_statistics_numerical.csv,Section 15: Exploratory Analysis,Completed
+12. Correlation Analysis,Pearson & Spearman correlation matrices and cor.test significance,R/11_correlation_analysis.R,correlation_matrix_pearson.csv,Section 17: Correlation Analysis,Completed
+13. Visualization Techniques,16 high-resolution 300 DPI figures using ggplot2,R/12_visualizations.R,outputs/figures/ (16 PNGs),Section 16: Visual Analysis,Completed
+14. Initial Insights,Evidence-based insights: Volume vs Margin 20% Discount Cliff,R/10_exploratory_analysis.R,discount_band_performance.csv,Section 18: Initial Insights,Completed
+15. R Code Snippets & Outputs,Formatted code blocks and captured analytical tables,All R Scripts,outputs/tables/ & console_outputs/,Throughout Report,Completed
+16. Screenshots / Visual Aids,16 high-resolution charts workflow diagrams and console outputs,R/12_visualizations.R,outputs/figures/ & screenshots/,Throughout Report & Appendix,Completed
+17. Comprehensive Documentation,README methodology reproducibility project metadata submission txt,Docs Scripts,docs/ & README.md,Section 21 & Appendices,Completed
+18. Professional Word Document,Publication-grade styled DOCX with embedded figures and tables,generate_doc_report.py,Superstore_Data_Cleaning_Preliminary_Analysis.docx,Main Deliverable,Completed
+19. Substantial 30-35 Hour Scope,26-section exhaustive report 15 modular scripts 22 tables 16 figures,Full Pipeline,Entire Repository,Complete Deliverable,Completed

@@ -1,0 +1,4 @@
+Segment,Total_Sales,Sales_Share,Total_Profit,Profit_Share,Avg_Sales,Avg_Profit,Avg_Discount,Overall_Margin,Total_Orders,Line_Items
+Consumer,1161401.34,50.56,134119.21,46.83,223.73,25.84,15.81,11.55,2586,5191
+Corporate,706146.37,30.74,91979.13,32.12,233.82,30.46,15.82,13.03,1514,3020
+Home Office,429653.15,18.7,60298.68,21.05,240.97,33.82,14.71,14.03,909,1783

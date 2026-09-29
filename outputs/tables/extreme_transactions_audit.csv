@@ -1,0 +1,16 @@
+Row_ID,Order_ID,Order_Date_Clean,Customer_Name,Category,Sub_Category,Product_Name,Sales,Quantity,Discount,Profit,Audit_Category
+2698,CA-2011-145317,2011-03-18,Sean Miller,Technology,Machines,Cisco TelePresence System EX90 Videoconferencing Unit,22638.48,6,0.5,-1811.0784,Top Gross Revenue Outlier
+6827,CA-2013-118689,2013-10-03,Tamara Chand,Technology,Copiers,Canon imageCLASS 2200 Advanced Copier,17499.95,5,0,8399.976,Top Gross Revenue Outlier
+8154,CA-2014-140151,2014-03-24,Raymond Buch,Technology,Copiers,Canon imageCLASS 2200 Advanced Copier,13999.96,4,0,6719.9808,Top Gross Revenue Outlier
+2624,CA-2014-127180,2014-10-23,Tom Ashbrook,Technology,Copiers,Canon imageCLASS 2200 Advanced Copier,11199.968,4,0.2,3919.9888,Top Gross Revenue Outlier
+4191,CA-2014-166709,2014-11-18,Hunter Lopez,Technology,Copiers,Canon imageCLASS 2200 Advanced Copier,10499.97,3,0,5039.9856,Top Gross Revenue Outlier
+7773,CA-2013-108196,2013-11-26,Cindy Stewart,Technology,Machines,Cubify CubeX 3D Printer Double Head Print,4499.985,5,0.7,-6599.978,Deepest Commercial Loss Outlier
+684,US-2014-168116,2014-11-05,Grant Thornton,Technology,Machines,Cubify CubeX 3D Printer Triple Head Print,7999.98,4,0.5,-3839.9904,Deepest Commercial Loss Outlier
+9775,CA-2011-169019,2011-07-26,Luke Foster,Office Supplies,Binders,GBC DocuBind P400 Electric Binding System,2177.584,8,0.8,-3701.8928,Deepest Commercial Loss Outlier
+3012,CA-2014-134845,2014-04-18,Sharelle Roach,Technology,Machines,Lexmark MX611dhe Monochrome Laser Printer,2549.985,5,0.7,-3399.98,Deepest Commercial Loss Outlier
+4992,US-2014-122714,2014-12-08,Henry Goldwyn,Office Supplies,Binders,Ibico EPK-21 Electric Binding System,1889.99,5,0.8,-2929.4845,Deepest Commercial Loss Outlier
+6827,CA-2013-118689,2013-10-03,Tamara Chand,Technology,Copiers,Canon imageCLASS 2200 Advanced Copier,17499.95,5,0,8399.976,Top Net Profit Outlier
+8154,CA-2014-140151,2014-03-24,Raymond Buch,Technology,Copiers,Canon imageCLASS 2200 Advanced Copier,13999.96,4,0,6719.9808,Top Net Profit Outlier
+4191,CA-2014-166709,2014-11-18,Hunter Lopez,Technology,Copiers,Canon imageCLASS 2200 Advanced Copier,10499.97,3,0,5039.9856,Top Net Profit Outlier
+9040,CA-2013-117121,2013-12-18,Adrian Barton,Office Supplies,Binders,GBC Ibimaster 500 Manual ProClick Binding System,9892.74,13,0,4946.37,Top Net Profit Outlier
+4099,CA-2011-116904,2011-09-23,Sanjit Chand,Office Supplies,Binders,Ibico EPK-21 Electric Binding System,9449.95,5,0,4630.4755,Top Net Profit Outlier

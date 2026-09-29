@@ -1,0 +1,42 @@
+     Row ID          Order ID        Order Date       Ship Date   
+ Min.   :   1   Length   :9994   Length   :9994   Length   :9994  
+ 1st Qu.:2499   N.unique :5009   N.unique :1238   N.unique :1334  
+ Median :4998   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Mean   :4998   Min.nchar:  14   Min.nchar:  10   Min.nchar:  10  
+ 3rd Qu.:7496   Max.nchar:  14   Max.nchar:  10   Max.nchar:  10  
+ Max.   :9994                                                     
+     Ship Mode       Customer ID     Customer Name       Segment    
+ Length   :9994   Length   :9994   Length   :9994   Length   :9994  
+ N.unique :   4   N.unique : 793   N.unique : 793   N.unique :   3  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Min.nchar:   8   Min.nchar:   8   Min.nchar:   7   Min.nchar:   8  
+ Max.nchar:  14   Max.nchar:   8   Max.nchar:  22   Max.nchar:  11  
+                                                                    
+      Country            City            State         Postal Code  
+ Length   :9994   Length   :9994   Length   :9994   Length   :9994  
+ N.unique :   1   N.unique : 531   N.unique :  49   N.unique : 631  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Min.nchar:  13   Min.nchar:   4   Min.nchar:   4   Min.nchar:   4  
+ Max.nchar:  13   Max.nchar:  17   Max.nchar:  20   Max.nchar:   5  
+                                                                    
+       Region         Product ID        Category       Sub-Category 
+ Length   :9994   Length   :9994   Length   :9994   Length   :9994  
+ N.unique :   4   N.unique :1862   N.unique :   3   N.unique :  17  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Min.nchar:   4   Min.nchar:  15   Min.nchar:   9   Min.nchar:   3  
+ Max.nchar:   7   Max.nchar:  15   Max.nchar:  15   Max.nchar:  11  
+                                                                    
+    Product Name      Sales              Quantity        Discount    
+ Length   :9994   Min.   :    0.444   Min.   : 1.00   Min.   :0.000  
+ N.unique :1841   1st Qu.:   17.280   1st Qu.: 2.00   1st Qu.:0.000  
+ N.blank  :   0   Median :   54.490   Median : 3.00   Median :0.200  
+ Min.nchar:   5   Mean   :  229.858   Mean   : 3.79   Mean   :0.156  
+ Max.nchar: 127   3rd Qu.:  209.940   3rd Qu.: 5.00   3rd Qu.:0.200  
+                  Max.   :22638.480   Max.   :14.00   Max.   :0.800  
+     Profit        
+ Min.   :-6599.98  
+ 1st Qu.:    1.73  
+ Median :    8.67  
+ Mean   :   28.66  
+ 3rd Qu.:   29.36  
+ Max.   : 8399.98  

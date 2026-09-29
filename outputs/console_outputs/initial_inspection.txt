@@ -1,0 +1,30 @@
+==============================================================================
+               INITIAL DATA INSPECTION: SUPERSTORE RAW DATASET                
+==============================================================================
+Inspection Timestamp   : 2026-09-29 21:06:23.336313
+Observed Total Rows    : 9,994
+Observed Total Columns : 21
+------------------------------------------------------------------------------
+COLUMN NAMES AND OBSERVED INITIAL TYPES:
+  [01] Row ID           | Type: numeric | Missing: 0
+  [02] Order ID         | Type: character | Missing: 0
+  [03] Order Date       | Type: character | Missing: 0
+  [04] Ship Date        | Type: character | Missing: 0
+  [05] Ship Mode        | Type: character | Missing: 0
+  [06] Customer ID      | Type: character | Missing: 0
+  [07] Customer Name    | Type: character | Missing: 0
+  [08] Segment          | Type: character | Missing: 0
+  [09] Country          | Type: character | Missing: 0
+  [10] City             | Type: character | Missing: 0
+  [11] State            | Type: character | Missing: 0
+  [12] Postal Code      | Type: character | Missing: 0
+  [13] Region           | Type: character | Missing: 0
+  [14] Product ID       | Type: character | Missing: 0
+  [15] Category         | Type: character | Missing: 0
+  [16] Sub-Category     | Type: character | Missing: 0
+  [17] Product Name     | Type: character | Missing: 0
+  [18] Sales            | Type: numeric | Missing: 0
+  [19] Quantity         | Type: numeric | Missing: 0
+  [20] Discount         | Type: numeric | Missing: 0
+  [21] Profit           | Type: numeric | Missing: 0
+==============================================================================

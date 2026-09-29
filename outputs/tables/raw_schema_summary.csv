@@ -1,0 +1,22 @@
+Column_Index,Variable_Name,Initial_Data_Type,Sample_Value_1,Sample_Value_2,Missing_Count,Unique_Values
+1,Row ID,numeric,1,2,0,9994
+2,Order ID,character,CA-2013-152156,CA-2013-152156,0,5009
+3,Order Date,character,09-11-2013,09-11-2013,0,1238
+4,Ship Date,character,12-11-2013,12-11-2013,0,1334
+5,Ship Mode,character,Second Class,Second Class,0,4
+6,Customer ID,character,CG-12520,CG-12520,0,793
+7,Customer Name,character,Claire Gute,Claire Gute,0,793
+8,Segment,character,Consumer,Consumer,0,3
+9,Country,character,United States,United States,0,1
+10,City,character,Henderson,Henderson,0,531
+11,State,character,Kentucky,Kentucky,0,49
+12,Postal Code,character,42420,42420,0,631
+13,Region,character,South,South,0,4
+14,Product ID,character,FUR-BO-10001798,FUR-CH-10000454,0,1862
+15,Category,character,Furniture,Furniture,0,3
+16,Sub-Category,character,Bookcases,Chairs,0,17
+17,Product Name,character,Bush Somerset Collection Bookcase,"Hon Deluxe Fabric Upholstered Stacking Chairs, Rounded Back",0,1841
+18,Sales,numeric,261.96,731.94,0,5825
+19,Quantity,numeric,2,3,0,14
+20,Discount,numeric,0,0,0,12
+21,Profit,numeric,41.9136,219.582,0,7287

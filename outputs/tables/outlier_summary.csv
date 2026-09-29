@@ -1,0 +1,6 @@
+Variable,Q1_25,Median,Q3_75,IQR,Lower_Fence,Upper_Fence,Outlier_Count,Outlier_Pct,Min_Observed,Max_Observed,Treatment,Reason
+Sales,17.28,54.49,209.94,192.66,-271.71,498.93,1167,11.68,0.44,22638.48,Retained,Legitimate high-value enterprise commercial equipment orders
+Profit,1.73,8.67,29.36,27.64,-39.72,70.82,1881,18.82,-6599.98,8399.98,Retained,Legitimate high gains and promotional liquidation losses
+Discount,0,0.2,0.2,0.2,-0.3,0.5,856,8.57,0,0.8,Retained,Legitimate institutional clearance and promotional discount tiers
+Quantity,2,3,5,3,-2.5,9.5,170,1.7,1,14,Retained,Legitimate bulk packaging and wholesale purchase quantities
+Shipping_Days,3,4,5,2,0,8,0,0,0,7,Retained,Legitimate operational logistics variation within SLA limits (0-7 d)

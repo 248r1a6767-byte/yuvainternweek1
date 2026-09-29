@@ -1,0 +1,14 @@
+Feature_Name,Formula_Definition,Analytical_Rationale,Variable_Scope
+Shipping_Days,"as.numeric(difftime(Ship_Date, Order_Date, units = 'days'))",Quantify logistics fulfillment speed and SLA adherence,Operational
+Profit_Margin,(Profit / Sales) * 100,Measure return per sales dollar at the line-item transaction level,Financial
+Is_Profitable,Profit >= 0,Binary classification target indicating commercial profitability,Financial
+Order_Year,lubridate::year(Order_Date),Enable annual growth and macro trend benchmarking (2011-2014),Temporal
+Order_Month,lubridate::month(Order_Date),Enable seasonal cycle and monthly pattern decomposition,Temporal
+Order_Month_Name,"factor(month.abb[Order_Month], levels = month.abb)",Ensure correct chronological plotting without alphabetical alphabetical distortion,Temporal
+Order_Quarter,"paste0('Q', lubridate::quarter(Order_Date))",Evaluate quarterly corporate purchasing and fiscal cycles,Temporal
+Order_Day_of_Week,weekdays(Order_Date) with Monday-Sunday ordering,Analyze intra-week purchasing behavior,Temporal
+Order_Year_Month,"format(Order_Date, '%Y-%m')",Provide uniform temporal anchors for chronological line charts,Temporal
+Discount_Band,"cut(Discount, [0, 0.1, 0.2, 0.3, 0.5, 0.8])",Evaluate non-linear discounting thresholds and margin collapse,Commercial
+Order_Value_Tier,"cut(Sales, [0, 25, 100, 500, Inf])",Segment transactions by revenue scale (Micro to Enterprise),Commercial
+Sales_MinMax / ZScore,"Min-Max rescaling [0, 1] & Z-score (x - mean)/sd",Rescale continuous predictors for distance-based ML algorithms,Machine Learning Ready
+Profit_MinMax / ZScore,"Min-Max rescaling [0, 1] & Z-score (x - mean)/sd",Rescale continuous financial targets for regression modeling,Machine Learning Ready

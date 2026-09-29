@@ -1,0 +1,25 @@
+Variable,Category_Level,Frequency,Percentage
+Category,Furniture,2121,21.22
+Category,Office Supplies,6026,60.3
+Category,Technology,1847,18.48
+Region,Central,2323,23.24
+Region,East,2848,28.5
+Region,South,1620,16.21
+Region,West,3203,32.05
+Segment,Consumer,5191,51.94
+Segment,Corporate,3020,30.22
+Segment,Home Office,1783,17.84
+Ship_Mode,Standard Class,5968,59.72
+Ship_Mode,Second Class,1945,19.46
+Ship_Mode,First Class,1538,15.39
+Ship_Mode,Same Day,543,5.43
+Discount_Band,0% (List Price),4798,48.01
+Discount_Band,1-10%,94,0.94
+Discount_Band,11-20%,3709,37.11
+Discount_Band,21-30%,227,2.27
+Discount_Band,31-50%,310,3.1
+Discount_Band,51-80%,856,8.57
+Order_Value_Tier,Micro (<$25),3308,33.1
+Order_Value_Tier,Medium ($25-$100),2921,29.23
+Order_Value_Tier,High ($100-$500),2603,26.05
+Order_Value_Tier,Enterprise (>$500),1162,11.63

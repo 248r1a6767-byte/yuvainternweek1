@@ -1,0 +1,22 @@
+Variable,Observed_Data_Type,Total_Observations,Missing_Count_Before,Missing_Percentage,Imputation_Method,Theoretical_Treatment_Strategy,Missing_Count_After,Completeness_Status
+Row ID,numeric,9994,0,0.00%,None Required (100% Complete),None (Unique identifier),0,100% Empirical Completeness
+Order ID,character,9994,0,0.00%,None Required (100% Complete),None (Grouping key),0,100% Empirical Completeness
+Order Date,character,9994,0,0.00%,None Required (100% Complete),Forward-fill or deletion if unrecoverable,0,100% Empirical Completeness
+Ship Date,character,9994,0,0.00%,None Required (100% Complete),Estimated via mean shipping duration by mode,0,100% Empirical Completeness
+Ship Mode,character,9994,0,0.00%,None Required (100% Complete),Mode imputation or 'Standard Class' assignment,0,100% Empirical Completeness
+Customer ID,character,9994,0,0.00%,None Required (100% Complete),Customer code lookup from CRM tables,0,100% Empirical Completeness
+Customer Name,character,9994,0,0.00%,None Required (100% Complete),Explicit 'Unknown Customer' designation,0,100% Empirical Completeness
+Segment,character,9994,0,0.00%,None Required (100% Complete),Mode imputation or 'Consumer' default,0,100% Empirical Completeness
+Country,character,9994,0,0.00%,None Required (100% Complete),Constant attribution ('United States'),0,100% Empirical Completeness
+City,character,9994,0,0.00%,None Required (100% Complete),ZIP-code spatial reverse geocoding,0,100% Empirical Completeness
+State,character,9994,0,0.00%,None Required (100% Complete),ZIP-code spatial reverse geocoding,0,100% Empirical Completeness
+Postal Code,character,9994,0,0.00%,None Required (100% Complete),Zero-padding or spatial lookup from City/State,0,100% Empirical Completeness
+Region,character,9994,0,0.00%,None Required (100% Complete),Spatial lookup from State boundaries,0,100% Empirical Completeness
+Product ID,character,9994,0,0.00%,None Required (100% Complete),Catalog SKU reverse lookup from Product Name,0,100% Empirical Completeness
+Category,character,9994,0,0.00%,None Required (100% Complete),Hierarchy lookup from Sub-Category,0,100% Empirical Completeness
+Sub-Category,character,9994,0,0.00%,None Required (100% Complete),Hierarchy lookup from Product Name,0,100% Empirical Completeness
+Product Name,character,9994,0,0.00%,None Required (100% Complete),SKU catalog title lookup from Product ID,0,100% Empirical Completeness
+Sales,numeric,9994,0,0.00%,None Required (100% Complete),Median imputation or linear regression on Units,0,100% Empirical Completeness
+Quantity,numeric,9994,0,0.00%,None Required (100% Complete),Median imputation (integer count),0,100% Empirical Completeness
+Discount,numeric,9994,0,0.00%,None Required (100% Complete),Zero imputation (0.00 default list price),0,100% Empirical Completeness
+Profit,numeric,9994,0,0.00%,None Required (100% Complete),Calculated from Sales * Sub-Category Margin,0,100% Empirical Completeness

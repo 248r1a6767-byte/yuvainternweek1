@@ -1,0 +1,22 @@
+Variable,Type,Missing_Count,Missing_Pct,Unique_Values,Potential_Issue,Action_Required,Final_Status
+Row ID,numeric,0,0,9994,None (Unique numerical primary key),Retain as unique row index,Validated & Ready for Transformation
+Order ID,character,0,0,5009,Repeated across multi-item orders (Legitimate retail behavior),Retain as grouping key; validate order integrity,Validated & Ready for Transformation
+Order Date,character,0,0,1238,Encoded as string; formatted as DD-MM-YYYY,Parse with lubridate::dmy() into native Date object,Validated & Ready for Transformation
+Ship Date,character,0,0,1334,Encoded as string; formatted as DD-MM-YYYY,Parse with lubridate::dmy() into native Date object,Validated & Ready for Transformation
+Ship Mode,character,0,0,4,Stored as character string rather than factor,Convert to ordered factor (Same Day to Standard Class),Validated & Ready for Transformation
+Customer ID,character,0,0,793,Alphanumeric customer identifier; needs validation,Retain as customer portfolio key,Validated & Ready for Transformation
+Customer Name,character,0,0,793,Customer personal name; check whitespace consistency,Apply trimws() to standardize string padding,Validated & Ready for Transformation
+Segment,character,0,0,3,Stored as character string rather than factor,"Convert to 3-level factor (Consumer, Corporate, Home Office)",Validated & Ready for Transformation
+Country,character,0,0,1,Single invariant country ('United States'),Retain as geographic scope indicator,Validated & Ready for Transformation
+City,character,0,0,531,531 distinct municipalities; check casing/spaces,Apply trimws() to ensure consistent city indexing,Validated & Ready for Transformation
+State,character,0,0,49,49 distinct US states; check categorical validity,Convert to factor for state-level aggregations,Validated & Ready for Transformation
+Postal Code,character,0,0,631,"Numeric format drops leading zeroes (e.g. 5408 for Burlington, VT)",Convert to 5-character string with zero-padding (sprintf),Validated & Ready for Transformation
+Region,character,0,0,4,Stored as character string rather than factor,"Convert to 4-level factor (Central, East, South, West)",Validated & Ready for Transformation
+Product ID,character,0,0,1862,"1,862 SKU product identifiers",Retain as SKU inventory identifier,Validated & Ready for Transformation
+Category,character,0,0,3,Primary department; stored as character,"Convert to 3-level factor (Furniture, Office Supplies, Technology)",Validated & Ready for Transformation
+Sub-Category,character,0,0,17,17 detailed sub-departments; stored as character,Convert to 17-level factor for detailed product analysis,Validated & Ready for Transformation
+Product Name,character,0,0,1841,"1,850 catalog titles; verify text integrity",Apply trimws() to standardize catalog descriptions,Validated & Ready for Transformation
+Sales,numeric,0,0,5825,"High positive skewness; extreme max value $22,638.48",Retain in native USD currency; apply log scaling for modeling,Validated & Ready for Transformation
+Quantity,numeric,0,0,14,Integer count 1-14; verify no zero/negative quantities,"Validate bounds [1, 14]; retain as integer volume driver",Validated & Ready for Transformation
+Discount,numeric,0,0,12,Rate scaled 0.0 to 0.8; check boundary conditions,"Validate bounds [0.0, 0.8]; engineer discrete discount tiers",Validated & Ready for Transformation
+Profit,numeric,0,0,7287,"Negative values present down to -$6,599.98 (Commercial losses)",Validate negative values as legitimate business losses; retain,Validated & Ready for Transformation

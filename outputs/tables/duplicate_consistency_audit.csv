@@ -1,0 +1,15 @@
+Audit_Dimension,Observed_Metric,Validation_Verdict
+Exact Row Duplicates,0,PASS (0 exact duplicate records)
+Primary Key (Row ID) Duplicates,0,PASS (100% unique primary keys)
+Unique Customer Orders,"5,009","PASS (5,009 distinct commercial orders)"
+Multi-Item Order Line Items,"4,985",PASS (Legitimate multi-SKU retail baskets)
+String Whitespace Anomalies,0 unhandled spaces (trimws applied),PASS (Standardized string encoding)
+Postal Code Formatting Defect,"Identified (Fixed via sprintf '%05s', e.g. 05408 -> 05408)",RESOLVED (5-digit padded string format enforced)
+Date Parsing Failures (DD-MM-YYYY),0,PASS (100% clean parsing via lubridate::dmy)
+Chronological Logic Inversions (Ship < Order),0,PASS (100% chronological compliance)
+Shipping Duration Range (Days),0 to 7 days (Mean: 3.96 days),PASS (Strict operational fulfillment SLAs)
+Negative Sales Violations,0,PASS (All sales strictly positive)
+Zero Sales Violations,0,PASS (No zero-revenue transactions)
+Non-Positive Quantity Violations,0,PASS (All unit counts positive integers 1-14)
+Discount Out-of-Bounds Violations,0,"PASS (All discounts within valid [0.0, 0.8] range)"
+Legitimate Commercial Loss Records,"1,871 transactions (18.72%)",VALIDATED (Commercial discounting losses retained)

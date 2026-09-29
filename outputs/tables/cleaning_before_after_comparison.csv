@@ -1,0 +1,16 @@
+Analytical_Dimension,Before_Preprocessing,After_Preprocessing,Net_Analytical_Impact
+Total Transaction Rows,"9,994 rows","9,994 rows (100% preserved)",Full data preservation; zero unprincipled record loss
+Total Variable Columns,21 columns,33 columns (Cleaned) / 47 columns (Analysis-Ready),+12 interpretable features / +26 modeling features
+Missing Data Cells,0 cells (100% complete),0 cells (100% verified complete),Zero data fabrication; empirical truth documented
+Exact Duplicate Records,0 duplicate rows,0 duplicate rows (0 removed),Integrity verified across multi-item transactions
+Truncated Postal Codes,"11 truncated zip codes (e.g. 5408 for Burlington, VT)",100% 5-digit zero-padded strings ('05408'),Correct geographic spatial routing across all 49 states
+Date Variable Data Types,character ('09-11-2013'),Native Date objects (lubridate::dmy),Enabled chronological time-series aggregations
+String Whitespace Formatting,Raw character strings with potential whitespace,trimws() applied across all text fields,Prevented string mismatch and join fragmentation
+Categorical Factor Encodings,Raw character strings,Standardized factors with explicit reference baselines,Protected regression models from dummy variable trap
+One-Hot / Dummy Indicators,0 binary indicators,14 one-hot dummy features (model.matrix),Ready for machine learning and linear modeling
+Normalized Continuous Features,0 normalized features,"5 Min-Max scaled features [0, 1]",Rescaled features for gradient and distance algorithms
+Standardized (Z-Score) Features,0 standardized features,"5 Z-Score standardized features N(0, 1)","Zero-mean, unit-variance standardized predictors"
+Engineered Temporal Attributes,0 derived temporal columns,"Year, Month, Month_Name, Quarter, Day_of_Week, YM_Date",Enabled seasonal decomposition and quarterly benchmarking
+Discretized Commercial Tiers,Continuous values only,Discount_Band (6 tiers) & Order_Value_Tier (4 tiers),Quantified the non-linear 20% discount cliff
+Identified Outlier Transactions,Unidentified / Unquantified,"1,167 Sales / 1,881 Profit outliers audited",Documented legitimate enterprise hardware purchases
+Outliers Inappropriately Deleted,0,0 (100% retained to preserve commercial reality),Avoided false inflation of enterprise profit margins

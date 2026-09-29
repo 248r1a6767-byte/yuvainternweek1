@@ -1,0 +1,30 @@
+==============================================================================
+               EMPIRICAL MISSING-VALUE AUDIT & PROFILE REPORT                 
+==============================================================================
+Audit Timestamp        : 2026-09-29 21:06:23.387877
+Dataset File           : data/raw/superstore_raw.csv
+Total Matrix Cells     : 209,874 (9,994 rows x 21 columns)
+Total Missing Cells    : 0
+Overall Missingness    : 0.0000%
+Rows with Missing Data : 0 (0.00%)
+------------------------------------------------------------------------------
+EVALUATION OF THEORETICAL MISSING DATA MECHANISMS:
+1. Missing Completely at Random (MCAR):
+   No systematic pattern; missingness independent of observed & unobserved data.
+2. Missing at Random (MAR):
+   Missingness systematically related to observed variables (e.g. shipping dates
+   omitted for specific shipping modes). Handled via multiple imputation.
+3. Missing Not at Random (MNAR):
+   Missingness directly dependent on the unobserved value itself (e.g. deep
+   commercial losses suppressed). Requires pattern-mixture modeling.
+------------------------------------------------------------------------------
+IMPUTATION STRATEGY BENCHMARKING (METHODOLOGICAL REFERENCE):
+- Mean Imputation: Distorts variance and underestimates standard error in skewed data.
+- Median Imputation: Robust against heavy right-skewed business distributions (Sales/Profit).
+- Mode / Unknown Level: Preferred for high-cardinality categorical attributes.
+- MICE / KNN: Preserves multivariate covariance structures across predictors.
+------------------------------------------------------------------------------
+AUDIT CONCLUSION:
+The ingested Superstore dataset exhibits 100% completeness. No artificial NA values
+were fabricated, strictly adhering to academic integrity standards.
+==============================================================================
