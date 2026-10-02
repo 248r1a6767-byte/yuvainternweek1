@@ -1,0 +1,7 @@
+Row_ID,Segment,Category,Region,Ship_Mode,SegmentConsumer,SegmentCorporate,SegmentHome_Office,CategoryFurniture,CategoryOffice_Supplies,CategoryTechnology,RegionCentral,RegionEast,RegionSouth,RegionWest
+1,Consumer,Furniture,South,Second Class,1,0,0,1,0,0,0,0,1,0
+2,Consumer,Furniture,South,Second Class,1,0,0,1,0,0,0,0,1,0
+3,Corporate,Office Supplies,West,Second Class,0,1,0,0,1,0,0,0,0,1
+4,Consumer,Furniture,South,Standard Class,1,0,0,1,0,0,0,0,1,0
+5,Consumer,Office Supplies,South,Standard Class,1,0,0,0,1,0,0,0,1,0
+6,Consumer,Furniture,West,Standard Class,1,0,0,1,0,0,0,0,0,1

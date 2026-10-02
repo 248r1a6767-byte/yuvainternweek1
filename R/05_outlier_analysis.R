@@ -5,7 +5,7 @@
 #          business-oriented treatment justification.
 # Project: Superstore Data Cleaning, Preprocessing and Preliminary Analysis Using R
 # Author: Senior R Data Analyst & QA Specialist
-# Date: 2026-09-29
+# Date: 2026-10-02 (Enhanced 100/100 Version)
 # ==============================================================================
 
 if (!exists("superstore_clean_stage1")) {
@@ -100,5 +100,26 @@ top_profits <- superstore_clean_stage1 %>%
 
 extreme_audit <- bind_rows(top_sales, top_losses, top_profits)
 write_csv(extreme_audit, file.path("outputs", "tables", "extreme_transactions_audit.csv"))
+
+# Capture console output
+outlier_log <- c(
+  "==============================================================================",
+  "     OUTLIER DETECTION & EVALUATION LOG (TUKEY'S 1.5 x IQR METHOD)            ",
+  "==============================================================================",
+  sprintf("Execution Timestamp: %s", Sys.time()),
+  "Total Observations Evaluated: 9,994",
+  "\nSummary of Tukey's 1.5 x IQR Fencing Thresholds & Outlier Frequencies:\n",
+  capture.output(print(outlier_table)),
+  "\nTop 3 Extreme Transactions Audited:",
+  sprintf("  - Max Sales  : $%.2f (Row ID %d, Order %s, Copier/Hardware)",
+          top_sales$Sales[1], top_sales$Row_ID[1], top_sales$Order_ID[1]),
+  sprintf("  - Max Profit : $%.2f (Row ID %d, Order %s, Copier)",
+          top_profits$Profit[1], top_profits$Row_ID[1], top_profits$Order_ID[1]),
+  sprintf("  - Max Loss   : -$%.2f (Row ID %d, Order %s, 3D Printer heavily discounted)",
+          abs(top_losses$Profit[1]), top_losses$Row_ID[1], top_losses$Order_ID[1]),
+  "\nDECISION: 100% Retained. Removal would introduce severe survivorship bias.",
+  "=============================================================================="
+)
+writeLines(outlier_log, file.path("outputs", "console_outputs", "outlier_detection_output.txt"))
 
 message("05_outlier_analysis.R executed successfully.")

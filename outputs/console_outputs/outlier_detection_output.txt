@@ -1,0 +1,34 @@
+==============================================================================
+     OUTLIER DETECTION & EVALUATION LOG (TUKEY'S 1.5 x IQR METHOD)            
+==============================================================================
+Execution Timestamp: 2026-10-02 13:30:07.477046
+Total Observations Evaluated: 9,994
+
+Summary of Tukey's 1.5 x IQR Fencing Thresholds & Outlier Frequencies:
+
+             Variable Q1_25 Median  Q3_75    IQR Lower_Fence Upper_Fence
+25%...1         Sales 17.28  54.49 209.94 192.66     -271.71      498.93
+25%...2        Profit  1.73   8.67  29.36  27.64      -39.72       70.82
+25%...3      Discount  0.00   0.20   0.20   0.20       -0.30        0.50
+25%...4      Quantity  2.00   3.00   5.00   3.00       -2.50        9.50
+25%...5 Shipping_Days  3.00   4.00   5.00   2.00        0.00        8.00
+        Outlier_Count Outlier_Pct Min_Observed Max_Observed Treatment
+25%...1          1167       11.68         0.44      22638.5  Retained
+25%...2          1881       18.82     -6599.98       8400.0  Retained
+25%...3           856        8.57         0.00          0.8  Retained
+25%...4           170        1.70         1.00         14.0  Retained
+25%...5             0        0.00         0.00          7.0  Retained
+                                                                      Reason
+25%...1         Legitimate high-value enterprise commercial equipment orders
+25%...2             Legitimate high gains and promotional liquidation losses
+25%...3    Legitimate institutional clearance and promotional discount tiers
+25%...4          Legitimate bulk packaging and wholesale purchase quantities
+25%...5 Legitimate operational logistics variation within SLA limits (0-7 d)
+
+Top 3 Extreme Transactions Audited:
+  - Max Sales  : $22638.48 (Row ID 2698, Order CA-2011-145317, Copier/Hardware)
+  - Max Profit : $8399.98 (Row ID 6827, Order CA-2013-118689, Copier)
+  - Max Loss   : -$6599.98 (Row ID 7773, Order CA-2013-108196, 3D Printer heavily discounted)
+
+DECISION: 100% Retained. Removal would introduce severe survivorship bias.
+==============================================================================

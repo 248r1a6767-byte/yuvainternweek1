@@ -1,6 +1,6 @@
 Variable,Observed_Data_Type,Total_Observations,Missing_Count_Before,Missing_Percentage,Imputation_Method,Theoretical_Treatment_Strategy,Missing_Count_After,Completeness_Status
-Row ID,numeric,9994,0,0.00%,None Required (100% Complete),None (Unique identifier),0,100% Empirical Completeness
-Order ID,character,9994,0,0.00%,None Required (100% Complete),None (Grouping key),0,100% Empirical Completeness
+Row ID,numeric,9994,0,0.00%,None Required (100% Complete),None (Unique primary key),0,100% Empirical Completeness
+Order ID,character,9994,0,0.00%,None Required (100% Complete),None (Transaction grouping key),0,100% Empirical Completeness
 Order Date,character,9994,0,0.00%,None Required (100% Complete),Forward-fill or deletion if unrecoverable,0,100% Empirical Completeness
 Ship Date,character,9994,0,0.00%,None Required (100% Complete),Estimated via mean shipping duration by mode,0,100% Empirical Completeness
 Ship Mode,character,9994,0,0.00%,None Required (100% Complete),Mode imputation or 'Standard Class' assignment,0,100% Empirical Completeness

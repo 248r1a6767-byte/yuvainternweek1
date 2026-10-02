@@ -1,0 +1,28 @@
+==============================================================================
+    FEATURE NORMALIZATION & STANDARDIZATION LOG (Min-Max & Z-Score)           
+==============================================================================
+Execution Timestamp: 2026-10-02 13:30:07.506641
+Mathematical Formulations:
+  Min-Max Normalization : x' = (x - min(x)) / (max(x) - min(x))  -> Range [0, 1]
+  Z-Score Standardization: z  = (x - mu) / sigma                 -> N(0, 1)
+
+Empirical Statistical Summary Before vs. After Rescaling:
+
+       Variable Original_Min Original_Max Original_Mean Original_SD MinMax_Min
+1         Sales         0.44      22638.5        229.86      623.25          0
+2        Profit     -6599.98       8400.0         28.66      234.26          0
+3      Discount         0.00          0.8          0.16        0.21          0
+4      Quantity         1.00         14.0          3.79        2.23          0
+5 Shipping_Days         0.00          7.0          3.96        1.75          0
+  MinMax_Max MinMax_Mean MinMax_SD ZScore_Min ZScore_Max ZScore_Mean ZScore_SD
+1          1      0.0101    0.0275      -0.37      35.95           0         1
+2          1      0.4419    0.0156     -28.30      35.74           0         1
+3          1      0.1953    0.2581      -0.76       3.12           0         1
+4          1      0.2146    0.1712      -1.25       4.59           0         1
+5          1      0.5655    0.2496      -2.27       1.74           0         1
+
+KEY VERIFICATION METRICS:
+  - Min-Max scaled bounds strictly lie within [0.00, 1.00].
+  - Z-Score standardized means round to 0.0000; standard deviations equal 1.0000.
+  - Original raw variables (Sales, Profit, etc.) are strictly retained intact.
+==============================================================================

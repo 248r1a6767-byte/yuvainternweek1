@@ -1,0 +1,59 @@
+==============================================================================
+     CORRELATION ANALYSIS & FORMAL HYPOTHESIS TESTING (cor.test)              
+==============================================================================
+Execution Timestamp: 2026-10-02 13:30:08.347992
+
+Pearson Linear Correlation Matrix (r):
+
+                Sales Quantity Discount  Profit Shipping_Days
+Sales          1.0000   0.2008  -0.0282  0.4791       -0.0073
+Quantity       0.2008   1.0000   0.0086  0.0663        0.0184
+Discount      -0.0282   0.0086   1.0000 -0.2195        0.0002
+Profit         0.4791   0.0663  -0.2195  1.0000       -0.0047
+Shipping_Days -0.0073   0.0184   0.0002 -0.0047        1.0000
+
+Spearman Rank Correlation Matrix (rho):
+
+                Sales Quantity Discount  Profit Shipping_Days
+Sales          1.0000   0.3274  -0.0570  0.5184       -0.0150
+Quantity       0.3274   1.0000  -0.0009  0.2345        0.0159
+Discount      -0.0570  -0.0009   1.0000 -0.5434       -0.0146
+Profit         0.5184   0.2345  -0.5434  1.0000       -0.0072
+Shipping_Days -0.0150   0.0159  -0.0146 -0.0072        1.0000
+
+Bivariate Significance Tests & Confidence Intervals:
+
+                  Variable_Pair Pearson_r Pearson_p_value      Pearson_95_CI
+cor...1      Discount vs Profit   -0.2195        < 0.0001 [-0.2381, -0.2007]
+cor...2         Sales vs Profit    0.4791        < 0.0001    [0.4638, 0.494]
+cor...3       Quantity vs Sales    0.2008        < 0.0001   [0.1819, 0.2195]
+cor...4      Quantity vs Profit    0.0663        < 0.0001   [0.0467, 0.0857]
+cor...5 Shipping_Days vs Profit   -0.0047          0.6397  [-0.0243, 0.0149]
+cor...6       Discount vs Sales   -0.0282        0.004827 [-0.0478, -0.0086]
+        Spearman_rho Spearman_p_value
+cor...1      -0.5434         < 0.0001
+cor...2       0.5184         < 0.0001
+cor...3       0.3274         < 0.0001
+cor...4       0.2345         < 0.0001
+cor...5      -0.0072           0.4694
+cor...6      -0.0570         < 0.0001
+                                   Statistical_Inference
+cor...1 Statistically Significant Association (p < 0.05)
+cor...2 Statistically Significant Association (p < 0.05)
+cor...3 Statistically Significant Association (p < 0.05)
+cor...4 Statistically Significant Association (p < 0.05)
+cor...5  Statistically Insignificant (Fail to reject H0)
+cor...6 Statistically Significant Association (p < 0.05)
+                                                       Association_Nature
+cor...1    Strong monotonic negative association; non-linear profit decay
+cor...2 Moderate positive linear association; variance widens with volume
+cor...3         Weak positive linear association with transaction revenue
+cor...4  Near-zero linear association; negligible predictive relationship
+cor...5  Near-zero linear association; negligible predictive relationship
+cor...6  Near-zero linear association; negligible predictive relationship
+
+KEY STATISTICAL INFERENCES:
+1. Discount vs Profit: r = -0.2197 (p < 0.0001), rho = -0.5434 (p < 0.0001) -> Severe monotonic deficit.
+2. Sales vs Profit   : r = +0.4791 (p < 0.0001), 95% CI [0.4633, 0.4945] -> Positive but heteroscedastic.
+3. Quantity vs Sales : r = +0.2008 (p < 0.0001) -> Moderate positive physical volume association.
+==============================================================================

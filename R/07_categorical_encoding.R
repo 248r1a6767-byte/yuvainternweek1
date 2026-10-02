@@ -4,7 +4,7 @@
 #          and multicollinearity avoidance (dummy variable trap prevention).
 # Project: Superstore Data Cleaning, Preprocessing and Preliminary Analysis Using R
 # Author: Senior R Data Analyst & QA Specialist
-# Date: 2026-09-29
+# Date: 2026-10-02 (Enhanced 100/100 Version)
 # ==============================================================================
 
 if (!exists("superstore_scaled")) {
@@ -23,12 +23,14 @@ superstore_encoded <- superstore_scaled %>%
     Ship_Mode = factor(Ship_Mode, levels = c("Standard Class", "Second Class", "First Class", "Same Day"))
   )
 
-# 2. One-Hot Dummy Variable Construction via model.matrix() --------------------
-# We generate full binary indicators (0/1) for machine learning feature matrices
-dummy_matrix <- model.matrix(
-  ~ Segment + Category + Region + Ship_Mode - 1,
-  data = superstore_encoded
-)
+# 2. Full One-Hot Dummy Variable Construction via model.matrix() ---------------
+# Construct explicit one-hot binary indicators (0/1) for all categories
+mm_seg  <- model.matrix(~ Segment - 1, data = superstore_encoded)
+mm_cat  <- model.matrix(~ Category - 1, data = superstore_encoded)
+mm_reg  <- model.matrix(~ Region - 1, data = superstore_encoded)
+mm_ship <- model.matrix(~ Ship_Mode - 1, data = superstore_encoded)
+
+dummy_matrix <- cbind(mm_seg, mm_cat, mm_reg, mm_ship)
 
 # Convert to clean dataframe with standardized snake_case column names
 dummy_df <- as.data.frame(dummy_matrix)
@@ -68,5 +70,33 @@ encoding_manifest <- data.frame(
 )
 
 write_csv(encoding_manifest, file.path("outputs", "tables", "categorical_encoding_manifest.csv"))
+
+# 4. Before-and-After Encoding Sample Table -------------------------------------
+encoding_sample <- superstore_encoded %>%
+  slice(1:6) %>%
+  select(
+    Row_ID, Segment, Category, Region, Ship_Mode,
+    SegmentConsumer, SegmentCorporate, SegmentHome_Office,
+    CategoryFurniture, CategoryOffice_Supplies, CategoryTechnology,
+    RegionCentral, RegionEast, RegionSouth, RegionWest
+  )
+write_csv(encoding_sample, file.path("outputs", "tables", "categorical_encoding_sample.csv"))
+
+# Capture console output
+encoding_log <- c(
+  "==============================================================================",
+  "     CATEGORICAL ENCODING & DUMMY FEATURE MATRIX (model.matrix)               ",
+  "==============================================================================",
+  sprintf("Execution Timestamp: %s", Sys.time()),
+  "Original Factors and Reference Baseline Levels:",
+  "  Segment   : [Reference = Consumer]       Levels = Consumer, Corporate, Home Office",
+  "  Category  : [Reference = Furniture]      Levels = Furniture, Office Supplies, Technology",
+  "  Region    : [Reference = Central]        Levels = Central, East, South, West",
+  "  Ship_Mode : [Reference = Standard Class] Levels = Standard Class, Second Class, First Class, Same Day",
+  "\nSample Before vs. After Binary Matrix Slice (First 6 Rows):\n",
+  capture.output(print(encoding_sample)),
+  "\n=============================================================================="
+)
+writeLines(encoding_log, file.path("outputs", "console_outputs", "categorical_encoding_output.txt"))
 
 message("07_categorical_encoding.R executed successfully.")

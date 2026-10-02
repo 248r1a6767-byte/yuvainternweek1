@@ -3,7 +3,7 @@ raw_rows,9994
 raw_cols,21
 cleaned_rows,9994
 cleaned_cols,33
-analysis_ready_cols,59
+analysis_ready_cols,62
 unique_orders,5009
 unique_customers,793
 unique_skus,1862

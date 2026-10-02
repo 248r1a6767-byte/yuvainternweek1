@@ -44,4 +44,4 @@ spc_tbl_ [9,994 × 21] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
   ..   Discount = col_double(),
   ..   Profit = col_double()
   .. )
- - attr(*, "problems")=<pointer: 0x0000029b71f25cf0> 
+ - attr(*, "problems")=<pointer: 0x000001f32a6fba90> 

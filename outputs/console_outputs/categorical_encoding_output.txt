@@ -1,0 +1,26 @@
+==============================================================================
+     CATEGORICAL ENCODING & DUMMY FEATURE MATRIX (model.matrix)               
+==============================================================================
+Execution Timestamp: 2026-10-02 13:30:07.540364
+Original Factors and Reference Baseline Levels:
+  Segment   : [Reference = Consumer]       Levels = Consumer, Corporate, Home Office
+  Category  : [Reference = Furniture]      Levels = Furniture, Office Supplies, Technology
+  Region    : [Reference = Central]        Levels = Central, East, South, West
+  Ship_Mode : [Reference = Standard Class] Levels = Standard Class, Second Class, First Class, Same Day
+
+Sample Before vs. After Binary Matrix Slice (First 6 Rows):
+
+# A tibble: 6 × 15
+  Row_ID Segment   Category    Region Ship_Mode SegmentConsumer SegmentCorporate
+   <dbl> <fct>     <fct>       <fct>  <fct>               <dbl>            <dbl>
+1      1 Consumer  Furniture   South  Second C…               1                0
+2      2 Consumer  Furniture   South  Second C…               1                0
+3      3 Corporate Office Sup… West   Second C…               0                1
+4      4 Consumer  Furniture   South  Standard…               1                0
+5      5 Consumer  Office Sup… South  Standard…               1                0
+6      6 Consumer  Furniture   West   Standard…               1                0
+# ℹ 8 more variables: SegmentHome_Office <dbl>, CategoryFurniture <dbl>,
+#   CategoryOffice_Supplies <dbl>, CategoryTechnology <dbl>,
+#   RegionCentral <dbl>, RegionEast <dbl>, RegionSouth <dbl>, RegionWest <dbl>
+
+==============================================================================
